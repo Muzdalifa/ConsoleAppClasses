@@ -2,7 +2,7 @@
 
 namespace ConsoleAppClasses
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -27,7 +27,23 @@ namespace ConsoleAppClasses
             Console.WriteLine(myCar2);
             Console.WriteLine(myCar3);
             Console.WriteLine(myCar4);
-            Console.WriteLine(myCar5);   
+            Console.WriteLine(myCar5);
+
+            Console.WriteLine(DivMath(3.0,0.0));
+            Console.WriteLine(DivMath(AskUserForNumber(),AskUserForNumber()));
+        }
+
+        public static double AskUserForNumber()
+        {
+            double number = 0;
+            Console.Write("Please enter a number : ");
+            double.TryParse(Console.ReadLine(), out number);
+            return number;
+        }
+
+        public static double DivMath(double numA, double numB)
+        {
+            return numA / numB;
         }
 
     }
